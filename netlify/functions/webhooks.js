@@ -10,6 +10,6 @@ const loadingApp = probot.load(app);
  * @param {import("@netlify/functions").HandlerEvent} event
  * @param {import("@netlify/functions").HandlerContext} context
  */
-exports.handler = createLambdaFunction(appFn, {
+exports.handler = createLambdaFunction(app, {
   probot: createProbot(),
 });
