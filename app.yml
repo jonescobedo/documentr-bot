@@ -1,6 +1,8 @@
 default_events:
   - issues
+  - pull_request
 
 default_permissions:
   issues: write
+  pull_requests: opened
   metadata: read
