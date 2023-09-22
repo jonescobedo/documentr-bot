@@ -9,4 +9,10 @@ module.exports = (app) => {
       context.issue({ body: 'Lets document this issue!' })
     );      
   });
+
+  app.on("pull_request.opened", async (context) => {
+    return context.octokit.issues.createComment(
+      context.issue({ body: 'Lets document this issue!' })
+    );      
+  });
 };
