@@ -6,7 +6,8 @@ module.exports = (app) => {
 
   app.on("issues.opened", async (context) => {
     return context.octokit.issues.createComment(
-      context.issue({ body: "Hello, World!" })
-    );
+      context.issue({
+        body: 'Lets document this issue!',
+      })
   });
 };
