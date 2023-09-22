@@ -32,7 +32,8 @@ exports.handler = async function (event, context) {
       body: '{"ok":true}',
     };
   } catch (error) {
-    
+    app.log.error(error);
+
     return {
       statusCode: error.status || 500,
       error: "ooops",
